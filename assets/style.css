@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --deep-dark: #111;
+    --dark: #222;
+    --light: #eee;
+    --light-grey: #cecece;
+    --blood: #880808;
+    --green: #43ff4c;
+    font-size: calc(14px + 0.3vw);
+    font-family: 'Quicksand', sans-serif;
+    color: var(--light);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 250vh;
+    background: var(--dark);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    max-width: 500px;
+    padding: 15px;
+    margin: 0px auto;
+    overflow-x: clip;
+    border-inline: solid 1px var(--deep-dark);
+    box-shadow: 0px 0px 3px 1px var(--deep-dark);
+}
+
+code {
+    display: block;
+    padding: 15px 5px;
+    font-size: 0.8rem;
+}
+
+.discover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0px;
+}
+
+.line {
+    position: absolute;
+    display: block;
+    margin: 0px auto;
+    width: 5px;
+    background: var(--green);
+    border-radius: 5px;
+    /*Properties for animations*/
+    animation-timeline: view(block 30% 50%);
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-name: lineHeight;
+    /* --- */
+}
+
+#animateSvgPath {
+    animation-name: path;
+    animation-timeline: view(block 40% 30%);
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+.animateContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    min-height: max-content;
+}
+
+.box {
+    border: solid 2px;
+    padding: 10px;
+    background: var(--deep-dark);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.animate {
+    position: relative;
+    animation-timeline: view(block 60% 20%);
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+.fl {
+    animation-name: FromLeft;
+}
+
+.fr {
+    animation-name: FromRight;
+}
+
+.show {
+    width: 100%;
+    padding: 8px;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+body:has(.demonstration.open) {
+    overflow: hidden;
+}
+
+.demonstration {
+    display: none;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: var(--dark);
+}
+
+.demonstration.open {
+    display: block;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.close span {
+    position: inherit;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--light);
+    transform-origin: center;
+}
+
+.close span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.close span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+.demonstration_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400vh;
+}
+
+.screenLimiter {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 174, 0, 0.2);
+}
+
+.h-50 {
+    top: 0px;
+    height: 50%;
+}
+
+.h-20 {
+    bottom: 0px;
+    height: 20%;
+}
+
+.lineDemonstration {
+    width: 200px;
+    height: 40px;
+    background: var(--green);
+    border-radius: 50%;
+    animation-name: rotate;
+    animation-timeline: view(block 50% 20%);
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes path {
+    from {
+        d: path('M248.36,263.428c4.16,4.16,10.88,4.16,15.04,0L508.733,18.095c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0l-237.76,237.76L18.173,3.054C13.907-1.106,7.187-0.999,3.027,3.268c-3.947,4.16-3.947,10.667,0,14.827L248.36,263.428z');
+    }
+    to {
+        d: path('M508.627,248.388c-4.267-4.053-10.773-4.053-14.933,0l-237.76,237.76l-237.76-237.76c-4.267-4.053-10.987-3.947-15.04,0.213c-3.947,4.16-3.947,10.667,0,14.827l245.333,245.333c4.16,4.16,10.88,4.16,15.04,0L508.84,263.428C512.893,259.161,512.787,252.441,508.627,248.388z');
+    }
+}
+
+@keyframes lineHeight {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes FromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes FromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(180deg);
+    }
+}

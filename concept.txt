@@ -1,0 +1,52 @@
+Avant de commencer le jeu merci de répondre à quelques questions
+ 
+ 1- Comment vous appelez vous ?
+    input type text
+ 
+ 2- En qu'elle année somme nous ? 
+    input type number
+ 
+ 3- Répondez vous rapidement aux messages professionnels ?
+    ->Oui ->Non
+ 
+ 4- Répondez vous rapidement aux messages personnels ?
+    ->Oui ->Non
+        **- Alors pourquoi ne répondez vous pas aux miens ?**
+ 
+ 5- Pensez vous qu'internet protège vos données ?
+    ->Oui ->Non
+        **- Et vous ?**
+ 
+ 7- Que pensez vous du libre arbitre ?
+    -> Nous avons le controle de nos actes
+    -> Nos actes sont régis par une force universelle
+    **-> (reponse delay ~3s) Peut importe cela ne changera rien à ce qui va arriver**
+ 
+ 6- Vous sentez vous en sécurité ?
+    ->Oui 
+    ->Non
+    **On click -J'ai l'impression que l'on m'observe**
+ 
+ 7- Êtes vous responsable du malheur de quelqu'un ?
+    ->Oui ->Non
+        - Vous en etes sur ?
+            ->Oui -> Non
+                - Vraiment sur ? 
+                    ->Non
+ 
+ 8- Que souhaiteriez vous dire à cette personne ? 
+    Saisi text "Je suis désolé pour toute cette souffrance" à la saisie utilisateur
+ 
+ 9- Auriez vous peur d'etre retrouvé par cette personne
+    ->Oui ->Non
+ 
+ 8- Votre porte est-elle verrouillé ? (Oui / Non)
+    Oui -> Vous devriez vérifier :) 
+    Non -> Je sais :)  
+ 
+ 9- Commment pensez vous que cela finira
+    ->Bien ->Mal
+
+**Nous verrons bien**
+Black screen
+
